@@ -1,0 +1,84 @@
+:root {
+  --gold: #FFD23F;
+  --bg: #0a0e16;
+  --panel: #141d2a;
+  --text: #d8dde6;
+  --muted: #8a93a3;
+  --border: #2a3a4e;
+  --link: #5DC8FF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Noto Sans JP", "Segoe UI", sans-serif;
+  line-height: 1.75;
+  font-size: 15px;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header {
+  background: linear-gradient(180deg, #101826, #0a0e16);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+.title {
+  font-size: 22px; font-weight: 800; letter-spacing: 2px;
+  color: var(--gold);
+}
+.subtitle { font-size: 12px; color: var(--muted); letter-spacing: 1px; margin-top: 2px; }
+
+.langbar { margin-top: 14px; display: flex; gap: 6px; }
+.langbar button {
+  background: var(--panel); color: var(--muted);
+  border: 1px solid var(--border); border-radius: 5px;
+  padding: 5px 12px; font-size: 12px; cursor: pointer;
+}
+.langbar button.active { color: var(--gold); border-color: var(--gold); }
+
+nav { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+nav a {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 5px; padding: 6px 14px; font-size: 13px; color: var(--text);
+}
+nav a:hover { border-color: var(--gold); text-decoration: none; }
+
+main { padding: 30px 0 60px; }
+
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px; color: var(--gold); font-weight: 700;
+  border-left: 3px solid var(--gold); padding-left: 10px; margin-bottom: 12px;
+}
+
+.faq-q { font-weight: 700; color: var(--text); margin-top: 16px; }
+.faq-a { color: var(--muted); margin-top: 4px; }
+
+.contact-box {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 8px; padding: 18px 20px; margin-top: 8px;
+}
+.contact-box .email { font-size: 17px; color: var(--gold); font-weight: 700; }
+
+/* 약관/개인정보 문서 렌더 영역 (marked.js 출력) */
+.doc { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 24px 26px; }
+.doc h1 { font-size: 21px; color: var(--gold); margin-bottom: 8px; }
+.doc h2 { font-size: 16px; color: var(--gold); margin: 22px 0 8px; }
+.doc h3 { font-size: 14px; color: var(--text); margin: 16px 0 6px; }
+.doc p, .doc li { color: var(--text); }
+.doc ul, .doc ol { padding-left: 22px; margin: 8px 0; }
+.doc li { margin: 3px 0; }
+.doc strong { color: #fff; }
+.doc hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+.doc em { color: var(--muted); }
+.doc-meta { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+.loading { color: var(--muted); text-align: center; padding: 40px 0; }
+.error { color: #E0696F; text-align: center; padding: 30px 0; }
+
+footer {
+  border-top: 1px solid var(--border); padding: 20px 24px;
+  text-align: center; color: var(--muted); font-size: 11px; letter-spacing: 0.5px;
+}

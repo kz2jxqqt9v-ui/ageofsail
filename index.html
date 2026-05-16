@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Age of Sail — Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="title">⚓ AGE OF SAIL</div>
+      <div class="subtitle" id="sub">고객지원</div>
+      <div class="langbar" id="langbar"></div>
+      <nav id="nav"></nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <section><p id="intro" class="faq-a"></p></section>
+      <section>
+        <h2 id="contact-h"></h2>
+        <p id="contact-d" class="faq-a"></p>
+        <div class="contact-box">
+          <a class="email" href="mailto:dev.yds25@gmail.com">dev.yds25@gmail.com</a>
+        </div>
+      </section>
+      <section>
+        <h2 id="faq-h"></h2>
+        <div id="faq-list"></div>
+      </section>
+      <section>
+        <h2 id="legal-h"></h2>
+        <nav id="legal-nav" style="margin-top:8px"></nav>
+      </section>
+    </div>
+  </main>
+  <footer>© 2026 DS.YUM · Age of Sail</footer>
+
+  <script>
+  (function () {
+    'use strict';
+    var T = {
+      ko: {
+        sub: '고객지원',
+        intro: 'Age of Sail(범선의 시대)은 17~19세기 범선 해전을 다룬 전략 시뮬레이션 게임입니다. 이 페이지에서 문의·자주 묻는 질문·약관을 확인하실 수 있습니다.',
+        contact_h: '문의',
+        contact_d: '게임 이용, 버그 신고, 환불 문의 등 모든 문의는 아래 이메일로 연락해 주세요. 가능한 한 빠르게 답변드립니다.',
+        faq_h: '자주 묻는 질문',
+        faqs: [
+          ['환불은 어떻게 받나요?', '본 게임은 Apple App Store 를 통해 판매되며, 환불은 Apple 의 환불 정책에 따릅니다. reportaproblem.apple.com 또는 기기의 "구입 항목 보고"를 통해 신청하실 수 있습니다.'],
+          ['멀티플레이가 연결되지 않습니다.', '멀티플레이는 인터넷 연결과 게임 서버가 필요한 부가 기능으로, 서버 점검·장애 시 일시적으로 이용이 어려울 수 있습니다. 솔로 플레이는 인터넷 연결 없이 언제든 이용할 수 있습니다.'],
+          ['게임 진행도가 사라졌어요.', '게스트 계정은 기기에 저장되어 앱 삭제·기기 변경 시 접근이 어려울 수 있습니다. Apple 계정으로 로그인하시면 진행도가 보존되어, 같은 Apple ID 로 재로그인 시 복원됩니다.'],
+          ['만 14세 미만도 이용할 수 있나요?', '아니요. 본 게임은 만 14세 이상만 이용할 수 있습니다.'],
+          ['추가 결제가 있나요?', '없습니다. 일회성 구매로 모든 콘텐츠를 이용할 수 있으며, 인앱 결제·구독·확률형 아이템이 일절 없습니다.']
+        ],
+        legal_h: '약관 및 정책',
+        terms: '이용약관', privacy: '개인정보처리방침'
+      },
+      en: {
+        sub: 'Support',
+        intro: 'Age of Sail is a strategy simulation game of 17th–19th century naval warfare. This page provides contact information, frequently asked questions, and legal documents.',
+        contact_h: 'Contact',
+        contact_d: 'For any inquiry — gameplay help, bug reports, refund questions — please email us at the address below. We respond as soon as possible.',
+        faq_h: 'Frequently Asked Questions',
+        faqs: [
+          ['How do I get a refund?', 'The game is sold through the Apple App Store, and refunds follow Apple’s refund policy. You can request one via reportaproblem.apple.com or "Report a Problem" on your device.'],
+          ['Multiplayer won’t connect.', 'Multiplayer is an optional online feature requiring an internet connection and the game server; it may be temporarily unavailable during server maintenance or outages. Solo play is always available without an internet connection.'],
+          ['My game progress is gone.', 'Guest accounts are stored on the device and may become inaccessible after deleting the app or changing devices. Signing in with an Apple account preserves your progress, which is restored when you sign in again with the same Apple ID.'],
+          ['Can children under 14 play?', 'No. This game is for players aged 14 and over only.'],
+          ['Are there additional purchases?', 'No. A single one-time purchase unlocks all content. There are no in-app purchases, subscriptions, or loot boxes.']
+        ],
+        legal_h: 'Legal',
+        terms: 'Terms of Service', privacy: 'Privacy Policy'
+      },
+      ja: {
+        sub: 'サポート',
+        intro: 'Age of Sail（帆船の時代）は、17〜19世紀の帆船海戦を扱う戦略シミュレーションゲームです。このページではお問い合わせ・よくある質問・規約をご確認いただけます。',
+        contact_h: 'お問い合わせ',
+        contact_d: 'ゲームの利用、不具合の報告、返金のお問い合わせなど、すべてのお問い合わせは下記のメールアドレスまでご連絡ください。できるだけ早くご返信いたします。',
+        faq_h: 'よくある質問',
+        faqs: [
+          ['返金はどうすれば受けられますか？', '本ゲームは Apple App Store を通じて販売されており、返金は Apple の返金ポリシーに従います。reportaproblem.apple.com または端末の「問題を報告」から申請できます。'],
+          ['マルチプレイに接続できません。', 'マルチプレイはインターネット接続とゲームサーバーが必要な追加機能で、サーバーメンテナンスや障害時には一時的に利用できない場合があります。ソロプレイはインターネット接続なしでいつでも利用できます。'],
+          ['ゲームの進行データが消えました。', 'ゲスト アカウントは端末に保存されるため、アプリの削除や端末の変更後はアクセスできなくなる場合があります。Apple アカウントでサインインすると進行データが保存され、同じ Apple ID で再サインインすると復元されます。'],
+          ['14歳未満でも利用できますか？', 'いいえ。本ゲームは14歳以上の方のみご利用いただけます。'],
+          ['追加の課金はありますか？', 'ありません。一度の購入ですべてのコンテンツを利用でき、アプリ内課金・サブスクリプション・ガチャは一切ありません。']
+        ],
+        legal_h: '規約とポリシー',
+        terms: '利用規約', privacy: 'プライバシーポリシー'
+      }
+    };
+
+    function getLang() {
+      var q = new URLSearchParams(location.search).get('lang');
+      if (['ko', 'en', 'ja'].indexOf(q) >= 0) return q;
+      try { var s = localStorage.getItem('aos_lang'); if (s) return s; } catch (e) {}
+      var n = (navigator.language || 'en').slice(0, 2);
+      return ['ko', 'en', 'ja'].indexOf(n) >= 0 ? n : 'en';
+    }
+    var lang = getLang();
+
+    function setLang(l) {
+      lang = l;
+      try { localStorage.setItem('aos_lang', l); } catch (e) {}
+      render();
+    }
+
+    function render() {
+      var t = T[lang];
+      document.documentElement.lang = lang;
+      document.getElementById('sub').textContent = t.sub;
+      document.getElementById('intro').textContent = t.intro;
+      document.getElementById('contact-h').textContent = t.contact_h;
+      document.getElementById('contact-d').textContent = t.contact_d;
+      document.getElementById('faq-h').textContent = t.faq_h;
+      document.getElementById('legal-h').textContent = t.legal_h;
+
+      var lb = document.getElementById('langbar');
+      lb.innerHTML = '';
+      [['ko', '한국어'], ['en', 'English'], ['ja', '日本語']].forEach(function (p) {
+        var b = document.createElement('button');
+        b.textContent = p[1];
+        if (p[0] === lang) b.className = 'active';
+        b.onclick = function () { setLang(p[0]); };
+        lb.appendChild(b);
+      });
+
+      var navHtml = '<a href="terms.html">' + t.terms + '</a><a href="privacy.html">' + t.privacy + '</a>';
+      document.getElementById('nav').innerHTML = navHtml;
+      document.getElementById('legal-nav').innerHTML = navHtml;
+
+      var fl = document.getElementById('faq-list');
+      fl.innerHTML = '';
+      t.faqs.forEach(function (qa) {
+        var q = document.createElement('div');
+        q.className = 'faq-q'; q.textContent = 'Q. ' + qa[0];
+        var a = document.createElement('div');
+        a.className = 'faq-a'; a.textContent = qa[1];
+        fl.appendChild(q); fl.appendChild(a);
+      });
+    }
+
+    render();
+  })();
+  </script>
+</body>
+</html>
