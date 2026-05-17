@@ -4,14 +4,14 @@
   'use strict';
   var NAS = 'https://bgamer.ydsnas.synology.me/legal/';
   var UI = {
-    ko: { terms: '이용약관', privacy: '개인정보처리방침', support: '고객지원',
+    ko: { terms: '이용약관', privacy: '개인정보처리방침', licenses: '오픈소스 라이선스', support: '고객지원',
           updated: '최종 개정', loadErr: '문서를 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.' },
-    en: { terms: 'Terms of Service', privacy: 'Privacy Policy', support: 'Support',
+    en: { terms: 'Terms of Service', privacy: 'Privacy Policy', licenses: 'Open-Source Licenses', support: 'Support',
           updated: 'Last updated', loadErr: 'Could not load the document. Please try again later.' },
-    ja: { terms: '利用規約', privacy: 'プライバシーポリシー', support: 'サポート',
+    ja: { terms: '利用規約', privacy: 'プライバシーポリシー', licenses: 'オープンソースライセンス', support: 'サポート',
           updated: '最終改定', loadErr: '文書を読み込めませんでした。しばらくしてから再度お試しください。' }
   };
-  var DOC = window.DOC_TYPE || 'terms';   // terms.html / privacy.html 에서 미리 지정
+  var DOC = window.DOC_TYPE || 'terms';   // terms.html / privacy.html / licenses.html 에서 미리 지정
 
   function getLang() {
     var q = new URLSearchParams(location.search).get('lang');
@@ -30,7 +30,7 @@
 
   function render() {
     var ui = UI[lang];
-    var label = DOC === 'terms' ? ui.terms : ui.privacy;
+    var label = DOC === 'terms' ? ui.terms : (DOC === 'privacy' ? ui.privacy : ui.licenses);
     document.documentElement.lang = lang;
     document.title = 'Age of Sail — ' + label;
     document.getElementById('page-sub').textContent = label;
@@ -48,7 +48,8 @@
     document.getElementById('nav').innerHTML =
       '<a href="index.html">' + ui.support + '</a>' +
       '<a href="terms.html">' + ui.terms + '</a>' +
-      '<a href="privacy.html">' + ui.privacy + '</a>';
+      '<a href="privacy.html">' + ui.privacy + '</a>' +
+      '<a href="licenses.html">' + ui.licenses + '</a>';
 
     loadDoc();
   }
