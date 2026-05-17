@@ -32,7 +32,7 @@
     var ui = UI[lang];
     var label = DOC === 'terms' ? ui.terms : (DOC === 'privacy' ? ui.privacy : ui.licenses);
     document.documentElement.lang = lang;
-    document.title = 'Age of Sail — ' + label;
+    document.title = 'Ship of the Line — ' + label;
     document.getElementById('page-sub').textContent = label;
 
     var lb = document.getElementById('langbar');
