@@ -55,7 +55,7 @@
           ['추가 결제가 있나요?', '없습니다. 일회성 구매로 모든 콘텐츠를 이용할 수 있으며, 인앱 결제·구독·확률형 아이템이 일절 없습니다.']
         ],
         legal_h: '약관 및 정책',
-        terms: '이용약관', privacy: '개인정보처리방침', licenses: '오픈소스 라이선스'
+        terms: '이용약관', privacy: '개인정보처리방침', eula: '사용자 라이선스(EULA)', licenses: '오픈소스 라이선스'
       },
       en: {
         sub: 'Support',
@@ -71,7 +71,7 @@
           ['Are there additional purchases?', 'No. A single one-time purchase unlocks all content. There are no in-app purchases, subscriptions, or loot boxes.']
         ],
         legal_h: 'Legal',
-        terms: 'Terms of Service', privacy: 'Privacy Policy', licenses: 'Open-Source Licenses'
+        terms: 'Terms of Service', privacy: 'Privacy Policy', eula: 'License Agreement (EULA)', licenses: 'Open-Source Licenses'
       },
       ja: {
         sub: 'サポート',
@@ -87,7 +87,7 @@
           ['追加の課金はありますか？', 'ありません。一度の購入ですべてのコンテンツを利用でき、アプリ内課金・サブスクリプション・ガチャは一切ありません。']
         ],
         legal_h: '規約とポリシー',
-        terms: '利用規約', privacy: 'プライバシーポリシー', licenses: 'オープンソースライセンス'
+        terms: '利用規約', privacy: 'プライバシーポリシー', eula: 'ライセンス契約（EULA）', licenses: 'オープンソースライセンス'
       }
     };
 
@@ -126,7 +126,7 @@
         lb.appendChild(b);
       });
 
-      var navHtml = '<a href="terms.html">' + t.terms + '</a><a href="privacy.html">' + t.privacy + '</a><a href="licenses.html">' + t.licenses + '</a>';
+      var navHtml = '<a href="terms.html">' + t.terms + '</a><a href="privacy.html">' + t.privacy + '</a><a href="eula.html">' + t.eula + '</a><a href="licenses.html">' + t.licenses + '</a>';
       document.getElementById('nav').innerHTML = navHtml;
       document.getElementById('legal-nav').innerHTML = navHtml;
 
