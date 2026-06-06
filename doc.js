@@ -2,7 +2,8 @@
    서버(legal/)를 갱신하면 이 페이지와 앱 모두에 즉시 반영된다. */
 (function () {
   'use strict';
-  var NAS = 'https://bgamer.ydsnas.synology.me/legal/';
+  // ★문서는 이 깃페이지 레포에 함께 호스팅 — 같은 출처라 CORS·NAS 권한·캐시 문제 없음(NAS fetch 폐기).
+  var NAS = '';
   var UI = {
     ko: { terms: '이용약관', privacy: '개인정보처리방침', licenses: '오픈소스 라이선스', eula: '사용자 라이선스(EULA)', support: '고객지원',
           updated: '최종 개정', loadErr: '문서를 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.' },
@@ -64,7 +65,11 @@
 
     fetch(NAS + DOC + '_' + lang + '.md' + bust)
       .then(function (r) { if (!r.ok) throw 0; return r.text(); })
-      .then(function (md) { docEl.innerHTML = marked.parse(md); })
+      .then(function (md) {
+        // marked(CDN) 로드 실패해도 원문은 보이게 폴백.
+        if (window.marked && marked.parse) docEl.innerHTML = marked.parse(md);
+        else docEl.innerHTML = '<pre style="white-space:pre-wrap;line-height:1.6">' + md.replace(/[&<>]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }) + '</pre>';
+      })
       .catch(function () {
         docEl.innerHTML = '<div class="error">' + UI[lang].loadErr +
           '<br><a href="mailto:dev.yds25@gmail.com">dev.yds25@gmail.com</a></div>';
