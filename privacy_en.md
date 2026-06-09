@@ -40,8 +40,9 @@ The Developer collects only the minimum information necessary to provide the Gam
 | Multiplayer | Room creation/join/spectate records, match results |
 | Chat | Lobby chat message content and sender nickname |
 | Gameplay Logs | Game progress data such as the maneuvering, firing, hits, and damage of AI-controlled ships during Solo Play; scenario and start time of solo sessions |
+| Usage Analytics (Firebase Analytics) | Screen-view and game-event usage records (battle start/end, scenario selection, etc.), app instance identifier, approximate location (country/city level) derived from IP address, device/OS information |
 
-The Game does not collect real names, resident registration numbers, contact numbers, precise location data, contact lists, photos, microphone/camera data, or similar information.
+The Game does not collect real names, resident registration numbers, contact numbers, precise (GPS) location data, contact lists, photos, microphone/camera data, **advertising identifiers (IDFA)**, or similar information.
 
 ## 3. Purposes of Collection and Use
 
@@ -72,8 +73,12 @@ The collected information is not used beyond the above purposes. The Developer d
    - When required by law, or when an investigative agency requests it in accordance with procedures prescribed by law
 2. **Apple Inc.** — "Sign in with Apple" authentication and the sale/payment of the Game through the Apple App Store are provided by Apple, and information processing in that process is subject to Apple's Privacy Policy (https://www.apple.com/legal/privacy/).
 3. **Valve Corporation** — the sale/payment of the Game through Steam (PC) and, where used, Steam account linkage are provided by Valve, and information processing in that process is subject to Valve's Privacy Policy (https://store.steampowered.com/privacy_agreement/). The Developer does not collect or store users' payment method information on any platform.
-3. The Developer uses hosting/network infrastructure to operate the game server, which is limited to technical means for data storage and transmission.
-4. The Developer does not collect behavioral information or serve advertising through advertising networks or third-party analytics/tracking SDKs.
+4. The Developer uses hosting/network infrastructure to operate the game server, which is limited to technical means for data storage and transmission.
+5. **Google LLC (Firebase)** — The Developer uses Firebase Analytics for usage statistics analysis, and Firebase App Check to verify genuine clients (blocking fraudulent, automated, or forged access).
+   - **Firebase Analytics**: Statistical data such as screen/event usage records, an app instance identifier, and approximate location derived from IP address are processed on Google's servers. The Developer uses a build that **does not collect the advertising identifier (IDFA)**, and does not use this data for advertising, behavioral targeting, or cross-app tracking.
+   - **Firebase App Check**: A device-integrity (Apple App Attest) token is verified through Google solely to block abnormal or forged client access to the game server.
+   - The above processing is subject to Google's Privacy Policy (https://policies.google.com/privacy).
+6. The Developer does **not serve advertising through ad networks, collect the advertising identifier (IDFA), or perform behavioral tracking for third-party marketing purposes (i.e., "tracking" under App Tracking Transparency).** The above use of Firebase Analytics is limited to game-quality and usage-statistics analysis, not advertising.
 
 ## 6. International Transfer of Personal Information
 
